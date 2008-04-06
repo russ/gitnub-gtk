@@ -152,7 +152,7 @@ by #{commit.author.name} on #{commit.committed_date.strftime('%A, %b, %I:%M %p')
 		@commit_id_label.text = active_commit.id
     @gecko = @glade["gecko"]
 		title, message = active_commit.message.split("\n", 2)
-    @gecko.open_stream('file://' + File.dirname(__FILE__) + '/', 'text/html')
+    @gecko.open_stream('file://' + Pathname.new(File.dirname(__FILE__)).realpath + '/', 'text/html')
 		@gecko.append_data(
 %Q[	
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"

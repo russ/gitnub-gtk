@@ -117,15 +117,15 @@ h1 {
   color: #888;
   display: block;
   padding-left: 22px;
-  background: url(common.png) 0 50% no-repeat;
+  background: url(images/common.png) 0 50% no-repeat;
 }
 
 #files li.add a {
-  background: url(added.png) 0 50% no-repeat;
+  background: url(images/added.png) 0 50% no-repeat;
 }
 
 #files li.delete a {
-  background: url(delete.png) 0 50% no-repeat;
+  background: url(images/delete.png) 0 50% no-repeat;
 }
 
 #diffs .diff {
