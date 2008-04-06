@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.3 on Sat Apr  5 15:46:57 2008 -->
+<!--Generated with glade3 3.4.3 on Sun Apr  6 11:50:16 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="window">
     <property name="width_request">500</property>
@@ -63,8 +63,9 @@
           </packing>
         </child>
         <child>
-          <widget class="GtkHBox" id="hbox4">
+          <widget class="GtkHPaned" id="hpaned1">
             <property name="visible">True</property>
+            <property name="can_focus">True</property>
             <child>
               <widget class="GtkScrolledWindow" id="scrolledwindow1">
                 <property name="visible">True</property>
@@ -82,8 +83,8 @@
                 </child>
               </widget>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
+                <property name="resize">False</property>
+                <property name="shrink">True</property>
               </packing>
             </child>
             <child>
@@ -92,7 +93,8 @@
                 <property name="creation_function">Gtk::MozEmbed.new</property>
               </widget>
               <packing>
-                <property name="position">1</property>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
               </packing>
             </child>
           </widget>
