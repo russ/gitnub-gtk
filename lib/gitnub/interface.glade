@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.3 on Sun Apr  6 11:50:16 2008 -->
+<!--Generated with glade3 3.4.3 on Sun Apr  6 12:15:04 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="window">
     <property name="width_request">500</property>
@@ -202,9 +202,9 @@
                       </widget>
                     </child>
                     <child>
-                      <widget class="GtkComboBox" id="branch_combobox">
+                      <widget class="Custom" id="branches">
                         <property name="visible">True</property>
-                        <signal name="changed" handler="on_branch_combobox_changed"/>
+                        <property name="creation_function">GitNub::Branches.new</property>
                       </widget>
                       <packing>
                         <property name="position">1</property>
