@@ -1,0 +1,8 @@
+This is a GTK port of the Mac OS X version of 
+Gitnub (http://github.com/Caged/gitnub/tree/master)
+
+Bear with me, this is the first release and my first time 
+doing anything with RubyGTK that extends beyond hellow world.
+
+I am planning on doing a huge overhaul on the code at a
+later date.
