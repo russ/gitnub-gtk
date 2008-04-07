@@ -4,5 +4,7 @@ Gitnub (http://github.com/Caged/gitnub/tree/master)
 Bear with me, this is the first release and my first time 
 doing anything with RubyGTK that extends beyond hello world.
 
-I am planning on doing a huge overhaul on the code at a
-later date.
+* NOTICE *
+Mozembed crashes when loading large commits. Try not to load 
+your initial commit for right now. I am looking into how to 
+fix this

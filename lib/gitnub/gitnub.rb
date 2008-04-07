@@ -23,8 +23,6 @@ module GitNub
 		attr_accessor :branches, :commits, :commit_view
 		attr_accessor :previous_button, :latest_button, :next_button
 	
-	  Gtk::MozEmbed.set_profile_path(ENV["HOME"] + ".mozilla", "RubyZilla")
-	
 	  def initialize(path_or_data, root = nil, domain = nil, localedir = nil, flag = GladeXML::FILE)
 	    bindtextdomain(domain, localedir, nil, "UTF-8")
 	    @glade = GladeXML.new(path_or_data, root, domain, localedir, flag) { |handler| method(handler) }
