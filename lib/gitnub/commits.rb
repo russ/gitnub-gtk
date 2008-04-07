@@ -35,7 +35,7 @@ module GitNub
 		end
 	
 		def update(controller)
-			@commits = fetch_commits_for(controller, controller.branches.active_branch, @offset)
+		 	@commits = fetch_commits_for(controller, controller.branches.active_branch, @offset, @current_commit_offset)
 
 			@model.clear
 			avatars = {}

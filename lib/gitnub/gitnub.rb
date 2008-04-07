@@ -8,10 +8,9 @@ require 'libglade2'
 require 'gtkmozembed'
 
 require 'grit/lib/grit'
-
-require 'commits'
-require 'branches'
-require 'commit_view'
+require 'gitnub/commits'
+require 'gitnub/branches'
+require 'gitnub/commit_view'
 
 module GitNub
 	class ApplicationController
@@ -75,10 +74,8 @@ module GitNub
 end
 	
 # Main program
-if __FILE__ == $0
-  PROG_PATH = File.join(Pathname.new(File.dirname(__FILE__)).realpath, "interface.glade")
-  PROG_NAME = "GitNub"
-	Gtk.init
-  GitNub::ApplicationController.new(PROG_PATH, nil, PROG_NAME)
-  Gtk.main
-end
+PROG_PATH = File.join(Pathname.new(File.dirname(__FILE__)).realpath, "interface.glade")
+PROG_NAME = "GitNub"
+Gtk.init
+GitNub::ApplicationController.new(PROG_PATH, nil, PROG_NAME)
+Gtk.main
