@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.3 on Sun Apr  6 12:15:04 2008 -->
+<!--Generated with glade3 3.4.3 on Sun Apr  6 17:45:39 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="window">
     <property name="width_request">500</property>
@@ -67,20 +67,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child>
-              <widget class="GtkScrolledWindow" id="scrolledwindow1">
+              <widget class="Custom" id="commits">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
-                <child>
-                  <widget class="GtkTreeView" id="commit_tree">
-                    <property name="width_request">300</property>
-                    <property name="visible">True</property>
-                    <property name="headers_visible">False</property>
-                    <property name="enable_search">False</property>
-                    <property name="show_expanders">False</property>
-                    <signal name="cursor_changed" handler="on_commit_tree_row_activated"/>
-                  </widget>
-                </child>
+                <property name="creation_function">GitNub::Commits.new</property>
               </widget>
               <packing>
                 <property name="resize">False</property>
@@ -88,9 +77,9 @@
               </packing>
             </child>
             <child>
-              <widget class="Custom" id="gecko">
+              <widget class="Custom" id="commit_view">
                 <property name="visible">True</property>
-                <property name="creation_function">Gtk::MozEmbed.new</property>
+                <property name="creation_function">GitNub::CommitView.new</property>
               </widget>
               <packing>
                 <property name="resize">True</property>
@@ -120,7 +109,6 @@
                     <property name="receives_default">True</property>
                     <property name="focus_on_click">False</property>
                     <property name="response_id">0</property>
-                    <signal name="clicked" handler="page_commits"/>
                     <child>
                       <widget class="GtkImage" id="image1">
                         <property name="visible">True</property>
@@ -136,7 +124,6 @@
                     <property name="receives_default">True</property>
                     <property name="focus_on_click">False</property>
                     <property name="response_id">0</property>
-                    <signal name="clicked" handler="page_commits"/>
                     <child>
                       <widget class="GtkImage" id="image2">
                         <property name="visible">True</property>
@@ -155,7 +142,6 @@
                     <property name="receives_default">True</property>
                     <property name="focus_on_click">False</property>
                     <property name="response_id">0</property>
-                    <signal name="clicked" handler="page_commits"/>
                     <child>
                       <widget class="GtkImage" id="image3">
                         <property name="visible">True</property>
@@ -178,10 +164,7 @@
               <widget class="GtkAlignment" id="alignment2">
                 <property name="visible">True</property>
                 <child>
-                  <widget class="GtkLabel" id="commit_id_label">
-                    <property name="visible">True</property>
-                    <property name="selectable">True</property>
-                  </widget>
+                  <placeholder/>
                 </child>
               </widget>
               <packing>
