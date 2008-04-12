@@ -1,10 +1,4 @@
 This is a GTK port of the Mac OS X version of 
 Gitnub (http://github.com/Caged/gitnub/tree/master)
 
-Bear with me, this is the first release and my first time 
-doing anything with RubyGTK that extends beyond hello world.
-
-* NOTICE *
-Mozembed crashes when loading large commits. Try not to load 
-your initial commit for right now. I am looking into how to 
-fix this
+This application requires rbwebkitgtk (http://github.com/danlucraft/rbwebkitgtk/tree/master)

@@ -5,7 +5,9 @@ require 'md5'
 require 'open-uri'
 require 'cgi'
 require 'libglade2'
-require 'gtkmozembed'
+require 'webkit'
+
+$: << Pathname.new(File.dirname(__FILE__) + '/../').realpath
 
 require 'grit/lib/grit'
 require 'gitnub/commits'
