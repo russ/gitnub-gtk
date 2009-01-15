@@ -51,7 +51,14 @@ module GitNub
 
 		# Basic about window
 		def on_about_activate(widget)
-			Gnome::About.new("GitNub-GTK", "0.01", "Copyright (C) 2008 Russ Smith", "A Port of GitNub for OS X", ["Russ Smith"], ["Russ Smith"], nil).show
+			about = Gtk::AboutDialog.new
+			about.name = "GitNub-GTK"
+			about.version = "0.01"
+			about.copyright = "Copyright (C) 2008 Russ Smith"
+			about.comments = "A Port of GitNub for OS X"
+			about.authors = ["Russ Smith", "James Turner"]
+			about.run
+			about.destroy
 		end
 
 		def on_window_delete_event(widget, arg0 = nil)
