@@ -25,7 +25,6 @@ body {
   color: #333;
 }
 
-
 ol, ul {
   list-style: none;
 }
@@ -174,6 +173,5 @@ pre code {
   background-color: #f7f7f7;
   color: #bbb;
 }
-
 
 /* @end */
