@@ -13,7 +13,6 @@ module GitNub
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<base href="file://#{Pathname.new(File.dirname(__FILE__)).realpath}/" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Commit</title>
   <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
@@ -39,7 +38,7 @@ module GitNub
 	 
 </body>
 </html>
-))
+), "#{Pathname.new(File.dirname(__FILE__)).realpath}/")
 		end
 
 		private
