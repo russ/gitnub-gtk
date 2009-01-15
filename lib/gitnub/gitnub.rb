@@ -74,8 +74,7 @@ module GitNub
 			begin
 				@repository = Grit::Repo.new(pwd + `cd #{pwd} && git rev-parse --git-dir 2>/dev/null`.chomp)
 			rescue Grit::InvalidGitRepositoryError
-				puts "Not a vaid git repo."
-				Gtk.main_quit
+				puts "Not a valid git repo."
 				exit!
 			end
 		end
