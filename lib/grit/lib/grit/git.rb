@@ -31,7 +31,7 @@ module Grit
       
       call = "#{Git.git_binary} --git-dir='#{self.git_dir}' #{cmd.to_s.gsub(/_/, '-')} #{(opt_args + ext_args).join(' ')}"
       puts call if Grit.debug
-      response = `#{call}`
+      response = IO.popen(call).readlines.join
       puts response if Grit.debug
       response
     end
