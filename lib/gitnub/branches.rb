@@ -8,14 +8,15 @@ module GitNub
 
 		def initialize
 			super
-			model = Gtk::ListStore.new(String)
+			@model = Gtk::ListStore.new(String)
+			self.set_model(@model)
 		end
 
 		# Populates the Combobox with the repos branches	
 		def update(controller)
-			model.clear
+			@model.clear
 			controller.repository.branches.each do |branch| 
-				itr = model.append
+				itr = @model.append
 				itr[0] = branch.name
 			end
 		end

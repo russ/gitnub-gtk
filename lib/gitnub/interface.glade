@@ -77,9 +77,16 @@
               </packing>
             </child>
             <child>
-              <widget class="Custom" id="commit_view">
+              <widget class="GtkScrolledWindow" id="scrolledwindow">
                 <property name="visible">True</property>
-                <property name="creation_function">GitNub::CommitView.new</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="Custom" id="commit_view">
+                    <property name="visible">True</property>
+                    <property name="creation_function">GitNub::CommitView.new</property>
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="resize">True</property>
