@@ -51,8 +51,8 @@ module GitNub
     # Basic about window
     def on_about_activate(widget)
       about = Gtk::AboutDialog.new
-      about.name = "GitNub-GTK"
-      about.version = "0.1"
+      about.program_name = "GitNub-GTK"
+      about.version = "0.2"
       about.copyright = "Copyright (C) 2008 Russ Smith"
       about.comments = "A Port of GitNub for OS X"
       about.authors = ["Russ Smith", "James Turner"]
